@@ -39,4 +39,33 @@ with open("d:\\1.txt","r") as f:
         keyVal = re.findall("%s" % St, line)
         if len(dt) > 0 and  len(tm) > 0  and len(keyVal) > 0:
             print(f"date:{dt[0]} time: {tm[0]} spentTime: {str(keyVal[0])}" )
+
+            
     
+    
+print("*******************")
+import re
+
+target_string = "The quick brown fox 2022-02-24 12:22:30 jumped over the tm: 25 lazy dog."
+
+# two group enclosed in separate ( and ) bracket
+result = re.search(r"(\d+-\d+-\d+).+(\d+:\d+:\d+).+(tm: \d+)", target_string)
+
+# Extract the matches using group()
+
+# print ten-letter word
+print(result.group(1))
+# Output basketball
+
+# print two digit number
+print(result.group(2))
+# Output 17
+
+print(result.group(3))
+
+print("***************************************")
+with open("d:\\1.txt","r") as f:
+    for line in f.readlines():
+        result = re.search(r"(\d+-\d+-\d+).+(\d+:\d+:\d+).+(tm: \d+)", line)
+        if result is not None:
+            print(f"date:{result.group(1)} time: {result.group(2)} spentTime: {str(result.group(3))}" )
