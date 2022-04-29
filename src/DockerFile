@@ -1,0 +1,19 @@
+FROM baseImage
+CMD [ "executable" ]
+COPY source dest
+RUN 
+WORKDIR /the/workdir/path
+the
+USER daemon
+baseImage
+ONBUILD INSTRUCTION
+path
+ADD  dest
+SHELL [ "executable" ]
+daemon
+FROM 
+HEALTHCHECK --interval=30s --timeout=30s --start-period=5s --retries=3 CMD [ "executable" ]
+LABEL ="value"
+VOLUME [ "
+" ]
+MAINTAINER name

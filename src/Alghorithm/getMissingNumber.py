@@ -37,7 +37,10 @@ def getMissingNumber_Method3(a, n):
         x2 = x2 ^ i
      
     return x1 ^ x2
-
+'''
+Take the sum of all elements in the array and subtract that from the sum of n+1 elements. For Eg: 
+If my elements are li=[1,2,4,5] then take the sum of all elements in li and subtract that from the sum of len(li)+1 elements. The following code shows the demonstration. 
+'''
 def getMissingNumber_Method4(a, n):
     n_elements_sum=n*(n+1)//2
     return n_elements_sum-sum(a)
